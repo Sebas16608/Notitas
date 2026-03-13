@@ -28,7 +28,7 @@ User.init({
         }
     },
     password: {
-        type: DataTypes.STRING(10),
+        type: DataTypes.STRING(100),
         allowNull: false,
         validate: {
             len: [1, 10]
@@ -37,8 +37,8 @@ User.init({
 },
 {
     sequelize,
-    modelName: "User",
-    tableName: "User",
+    modelName: "Users",
+    tableName: "Users",
     hooks: {
         beforeCreate: async (user: User) => {
             const salt = await bcrypt.genSalt(10)

@@ -1,11 +1,23 @@
 import app from "./app";
+import sequelize from "./config/database";
+import Notita from "./models/notitas.models";
+import User from "./models/user.models";
 
 const port = 3000;
 
-try {
-    app.listen(port, () => {
-        console.log(`Servidor corriendo en http://localhost:${port}`);
-    })
-} catch (error) {
-    console.log(`Error en el servidor ${error}`);
-}
+(async() => {
+    try {
+        await sequelize.authenticate();
+        console.log("DB establecida");
+
+        await sequelize.sync({ alter: true });
+        console.log("DB sincronizada")
+
+        app.listen(port, () =>{
+            console.log(`Servidor corriendo en http://localhost:${port}`);
+        })
+    } catch (error) {
+        console.error(`Error al iniciar el servidor ${error}`);
+        process.exit(1);
+    }
+})();

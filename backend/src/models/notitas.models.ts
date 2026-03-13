@@ -5,7 +5,7 @@ class Notita extends Model{
     declare id? : number;
     declare title: string;
     declare content: string;
-    declare userId: string;
+    declare userId: number;
 }
 
 Notita.init({
@@ -27,7 +27,7 @@ Notita.init({
         allowNull: false
     },
     userId: {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
         allowNull: false,
         references: {
             model: "User",
