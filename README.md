@@ -1,8 +1,8 @@
 # 📝 Notitas App Backend
 
-Backend desarrollado en C# con ASP.NET Core Web API para la app de notitas, un proyecto personal lleno de cariño y recuerdos.
+Backend desarrollado en TypeScript con Express.js para la app de notitas, un proyecto personal lleno de cariño y recuerdos.
 
-Inicialmente creado en TypeScript, ahora migrado a ASP.NET para una estructura más robusta, tipada y escalable 🚀
+Inicialmente creado para ser simple, tipado y escalable con Node.js 🚀
 
 ## 🌟 Historia
 
@@ -17,10 +17,9 @@ Cada nota que se cree en esta app representa un pensamiento, un recuerdo o un in
 Es un proyecto más allá de la programación: es un símbolo de cariño y agradecimiento por seguirme el juego, por todo el amor y la paciencia que tiene conmigo 🌹.
 
 ## ⚙️ Tecnologías
-- C#
-- ASP.NET Core Web API
-- Entity Framework Core
-- Arquitectura basada en Controllers, DTOs y ORM
+- TypeScript
+- Express.js
+- Node.js
 - API RESTful
 
 ## 💌 Dedicado
