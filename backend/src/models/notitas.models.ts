@@ -43,3 +43,5 @@ Notita.init({
     tableName: "Notitas",
 }
 );
+
+export default Notita;
