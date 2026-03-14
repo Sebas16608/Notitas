@@ -2,6 +2,8 @@ import app from "./app";
 import sequelize from "./config/database";
 import Notita from "./models/notitas.models";
 import User from "./models/user.models";
+import RefreshToken from "./models/refreshToken.models";
+import "./models/associations";
 
 const port = 3000;
 
