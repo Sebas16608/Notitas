@@ -10,6 +10,13 @@ use Doctrine\ORM\Mapping as ORM;
 class Message
 {
 
+    public function __construct()
+        {
+            $now = new \DateTimeImmutable();
+            $this->createdAt = $now;
+            $this->updatedAt = $now;
+        }
+
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
@@ -22,10 +29,10 @@ class Message
     private ?string $message = null;
 
     #[ORM\Column]
-    private ?\DateTime $createdAt = null;
+    private ?\DateTimeImmutable $createdAt = null;
 
     #[ORM\Column]
-    private ?\DateTime $updatedAt = null;
+    private ?\DateTimeImmutable $updatedAt = null;
 
     public function getId(): ?int
     {
